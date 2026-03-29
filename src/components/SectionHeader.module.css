@@ -1,0 +1,25 @@
+.wrapper {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.number {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.2em;
+    opacity: 0;
+    flex-shrink: 0;
+    padding-top: 4px;
+}
+
+.title {
+    font-family: var(--font-serif);
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: var(--text);
+    opacity: 0;
+    line-height: 1.2;
+}

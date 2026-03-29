@@ -1,0 +1,92 @@
+.page {
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.particles {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.header {
+    position: relative;
+    z-index: 1;
+    padding: 80px 40px 60px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.chapterLabel {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.title {
+    font-family: var(--font-serif);
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--text);
+    line-height: 1.1;
+    margin-bottom: 32px;
+}
+
+.epigraph {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    color: var(--text-dim);
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 36px;
+    padding-left: 20px;
+    border-left: 2px solid var(--border-bright);
+}
+
+.headerLine {
+    height: 1px;
+    background: linear-gradient(90deg, var(--accent) 0%, var(--accent2) 40%, transparent 100%);
+    opacity: 0.4;
+}
+
+.main {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 40px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+.footer {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 32px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-dimmer);
+    letter-spacing: 0.2em;
+    border-top: 1px solid var(--border);
+}
+
+@media (max-width: 600px) {
+    .header {
+        padding: 48px 20px 40px;
+    }
+
+    .main {
+        padding: 0 20px 60px;
+        gap: 48px;
+    }
+}

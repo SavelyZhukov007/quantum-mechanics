@@ -1,0 +1,144 @@
+.heisenbergViz {
+    background: var(--bg-card2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    margin: 24px 0;
+}
+
+.vizLabel {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-dim);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.vizTag {
+    background: rgba(123, 140, 255, 0.15);
+    color: var(--accent);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+}
+
+.canvas {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.vizCaption {
+    font-family: var(--font-body);
+    font-size: 12px;
+    color: var(--text-dimmer);
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.interactive {
+    background: var(--bg-card2);
+    border: 1px solid var(--border-bright);
+    border-radius: var(--radius);
+    padding: 24px;
+    margin: 24px 0;
+}
+
+.interactiveTitle {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-dim);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.trackWrap {
+    position: relative;
+    height: 24px;
+    margin-bottom: 24px;
+    cursor: pointer;
+}
+
+.track {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--border-bright);
+    transform: translateY(-50%);
+    border-radius: 99px;
+}
+
+.knob {
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    background: var(--accent);
+    border-radius: 50%;
+    transform: translateY(-50%);
+    cursor: grab;
+    box-shadow: 0 0 12px var(--accent);
+    transition: box-shadow 0.2s;
+}
+
+.knob:active {
+    cursor: grabbing;
+    box-shadow: 0 0 24px var(--accent);
+}
+
+.bars {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.barRow {
+    display: grid;
+    grid-template-columns: 100px 1fr 160px;
+    align-items: center;
+    gap: 12px;
+}
+
+.barLabel {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-dim);
+    text-align: right;
+}
+
+.barBg {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 99px;
+    overflow: hidden;
+}
+
+.barFill {
+    height: 100%;
+    border-radius: 99px;
+    transition: width 0.05s linear;
+}
+
+.barVal {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-dim);
+}
+
+.constraint {
+    text-align: center;
+    margin-top: 16px;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--gold);
+    opacity: 0.7;
+}

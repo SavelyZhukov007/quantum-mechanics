@@ -1,0 +1,97 @@
+.vizBox {
+    background: var(--bg-card2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    margin: 24px 0;
+}
+
+.vizLabel {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-dim);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.vizTag {
+    background: rgba(123, 140, 255, 0.15);
+    color: var(--accent);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+}
+
+.canvas {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+.caption {
+    font-family: var(--font-body);
+    font-size: 12px;
+    color: var(--text-dimmer);
+    margin-top: 10px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.exercise {
+    background: rgba(224, 200, 122, 0.05);
+    border: 1px solid rgba(224, 200, 122, 0.2);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    margin: 24px 0;
+}
+
+.exHeader {
+    margin-bottom: 10px;
+}
+
+.exNum {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+}
+
+.exText {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    color: var(--text);
+    margin-bottom: 14px;
+    line-height: 1.7;
+}
+
+.exBtn {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--gold);
+    background: rgba(224, 200, 122, 0.1);
+    border: 1px solid rgba(224, 200, 122, 0.25);
+    border-radius: 6px;
+    padding: 6px 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.exBtn:hover {
+    background: rgba(224, 200, 122, 0.18);
+}
+
+.exAnswer {
+    margin-top: 14px;
+    padding: 12px 16px;
+    background: rgba(77, 255, 176, 0.05);
+    border-left: 3px solid var(--green);
+    border-radius: 0 8px 8px 0;
+}

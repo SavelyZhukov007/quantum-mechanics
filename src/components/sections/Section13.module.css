@@ -1,0 +1,109 @@
+.polTable {
+    background: var(--bg-card2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    margin: 24px 0;
+}
+
+.polLabel {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-dim);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tag {
+    background: rgba(123, 140, 255, 0.15);
+    color: var(--accent);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+}
+
+.polLayout {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+    align-items: start;
+}
+
+.stateList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.stateBtn {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 12px;
+    cursor: pointer;
+    text-align: left;
+    transition: border-color 0.2s, background 0.2s;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.stateBtn:hover {
+    border-color: var(--c, var(--accent));
+}
+
+.stateBtn.active {
+    background: rgba(123, 140, 255, 0.08);
+    border-color: var(--c, var(--accent));
+}
+
+.stateName {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--c, var(--accent));
+}
+
+.stateLabel {
+    font-family: var(--font-body);
+    font-size: 11px;
+    color: var(--text-dimmer);
+}
+
+.polCanvas {
+    width: 280px;
+    height: 280px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+.pbsBox {
+    background: var(--bg-card2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    margin: 24px 0;
+}
+
+.slider {
+    width: 100%;
+    margin: 8px 0 4px;
+    accent-color: var(--accent);
+}
+
+.sliderLabel {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-dim);
+    margin-bottom: 12px;
+}
+
+.pbsCanvas {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}

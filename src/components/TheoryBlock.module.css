@@ -1,0 +1,22 @@
+.block {
+    font-family: var(--font-serif);
+    font-size: 1.08rem;
+    color: var(--text);
+    line-height: 1.85;
+    margin-bottom: 24px;
+}
+
+.block p {
+    margin-bottom: 16px;
+}
+
+.block p:last-child {
+    margin-bottom: 0;
+}
+
+.highlight {
+    background: rgba(123, 140, 255, 0.06);
+    border-left: 3px solid var(--accent);
+    padding: 16px 20px;
+    border-radius: 0 var(--radius) var(--radius) 0;
+}

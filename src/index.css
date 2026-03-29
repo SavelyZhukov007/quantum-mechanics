@@ -1,0 +1,80 @@
+:root {
+  --bg: #0a0a0f;
+  --bg-card: #0f0f1a;
+  --bg-card2: #13131f;
+  --border: rgba(100, 120, 200, 0.12);
+  --border-bright: rgba(120, 150, 255, 0.25);
+  --text: #e8e8f0;
+  --text-dim: #8888aa;
+  --text-dimmer: #55556a;
+  --accent: #7b8cff;
+  --accent2: #b06fff;
+  --accent3: #4dd9ff;
+  --gold: #e0c87a;
+  --green: #4dffb0;
+  --radius: 12px;
+  --font-body: 'Manrope', sans-serif;
+  --font-serif: 'Crimson Pro', serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-bright);
+  border-radius: 99px;
+}
+
+.katex {
+  font-size: 1.05em;
+}
+
+.ant-card {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+}
+
+.ant-tabs-tab {
+  color: var(--text-dim) !important;
+  font-family: var(--font-body) !important;
+}
+
+.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: var(--accent) !important;
+}
+
+.ant-tabs-ink-bar {
+  background: var(--accent) !important;
+}
+
+.ant-tabs-nav::before {
+  border-color: var(--border) !important;
+}
