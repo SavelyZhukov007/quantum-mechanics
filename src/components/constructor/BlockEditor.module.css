@@ -1,0 +1,317 @@
+/* ════════════════════════════════════════════════════════════════
+   BlockEditor.module.css
+════════════════════════════════════════════════════════════════ */
+
+.wrapper {
+    position: relative;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--bg-card);
+    cursor: pointer;
+    transition: border-color 0.15s;
+}
+
+.wrapper:hover {
+    border-color: var(--border-bright);
+}
+
+.wrapper.selected {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(123, 140, 255, 0.15);
+    cursor: default;
+}
+
+/* ─── Тулбар ─── */
+.toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 10px;
+    border-bottom: 1px solid var(--border);
+    background: rgba(123, 140, 255, 0.05);
+    border-radius: 9px 9px 0 0;
+}
+
+.blockTypeTag {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+.toolbarActions {
+    display: flex;
+    gap: 4px;
+}
+
+.toolbarActions button {
+    padding: 3px 8px;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    color: var(--text-dim);
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.15s;
+}
+
+.toolbarActions button:hover {
+    background: rgba(255,255,255,0.05);
+    color: var(--text);
+}
+
+.toolbarActions button:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+.deleteBtn:hover {
+    background: rgba(255, 80, 80, 0.15) !important;
+    color: #ff6b6b !important;
+    border-color: rgba(255, 80, 80, 0.3) !important;
+}
+
+/* ─── Тело блока ─── */
+.body {
+    padding: 14px 16px;
+}
+
+/* ─── Общие элементы форм ─── */
+.row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: var(--text-dim);
+}
+
+.row label {
+    color: var(--text-dim);
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.row select {
+    flex: 1;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text);
+    padding: 4px 8px;
+    font-size: 13px;
+    font-family: var(--font-body);
+}
+
+.rowDouble {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.field label {
+    font-size: 11px;
+    color: var(--text-dim);
+    letter-spacing: 0.05em;
+}
+
+.field input,
+.field select {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text);
+    padding: 5px 9px;
+    font-size: 13px;
+    font-family: var(--font-body);
+    outline: none;
+    transition: border-color 0.15s;
+}
+
+.field input:focus,
+.field select:focus {
+    border-color: var(--accent);
+}
+
+.field input[type="range"] {
+    padding: 0;
+    cursor: pointer;
+    accent-color: var(--accent);
+}
+
+/* ─── Текстовые поля ─── */
+.headerInput {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    outline: none;
+    color: var(--text);
+    font-family: var(--font-serif);
+    font-weight: 600;
+    padding: 4px 0;
+    margin-top: 4px;
+}
+
+.textarea {
+    width: 100%;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text);
+    padding: 10px 12px;
+    font-size: 13px;
+    font-family: var(--font-body);
+    line-height: 1.7;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.15s;
+}
+
+.textarea:focus {
+    border-color: var(--accent);
+}
+
+.monotextarea {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.hint {
+    font-size: 11px;
+    color: var(--text-dimmer);
+    margin-top: 6px;
+}
+
+/* ─── Изображения ─── */
+.imageEditor {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.imagePreviewWrap {
+    border-radius: 8px;
+    overflow: hidden;
+    max-height: 240px;
+}
+
+.imagePreview {
+    width: 100%;
+    max-height: 240px;
+    display: block;
+}
+
+.imagePlaceholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 120px;
+    border: 2px dashed var(--border);
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--text-dimmer);
+    font-size: 13px;
+    transition: border-color 0.15s;
+}
+
+.imagePlaceholder:hover {
+    border-color: var(--accent);
+    color: var(--text-dim);
+}
+
+.imagePlaceholder span:first-child {
+    font-size: 28px;
+}
+
+.imageControls {
+    display: flex;
+    gap: 8px;
+}
+
+.uploadBtn {
+    padding: 5px 14px;
+    background: rgba(123, 140, 255, 0.1);
+    border: 1px solid var(--border-bright);
+    border-radius: 6px;
+    color: var(--accent);
+    cursor: pointer;
+    font-size: 12px;
+    font-family: var(--font-body);
+}
+
+.clearBtn {
+    padding: 5px 10px;
+    background: rgba(255, 80, 80, 0.1);
+    border: 1px solid rgba(255, 80, 80, 0.2);
+    border-radius: 6px;
+    color: #ff6b6b;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+/* ─── Анимации ─── */
+.animEditor {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.animPreview {
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--bg);
+    border: 1px solid var(--border);
+}
+
+.animCanvas {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ─── Задачи ─── */
+.exerciseEditor {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* ─── Разделитель ─── */
+.divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 4px 0;
+}
+
+/* ─── Header editor ─── */
+.headerEditor {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* ─── Theory editor ─── */
+.theoryEditor {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* ─── Python editor ─── */
+.pythonEditor {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

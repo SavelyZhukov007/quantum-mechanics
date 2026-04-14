@@ -1,0 +1,53 @@
+/* ════════════════════════════════════════════════════════════════
+   ConstructorCanvas.module.css
+════════════════════════════════════════════════════════════════ */
+
+.canvas {
+    flex: 1;
+    overflow-y: auto;
+    padding: 32px 40px;
+    background: var(--bg);
+}
+
+.empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 12px;
+    color: var(--text-dimmer);
+}
+
+.emptyIcon {
+    font-size: 48px;
+    opacity: 0.3;
+}
+
+.emptyTitle {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-dim);
+}
+
+.emptyDesc {
+    font-size: 13px;
+}
+
+.blockList {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.pageTitle {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--text-dimmer);
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 4px;
+}

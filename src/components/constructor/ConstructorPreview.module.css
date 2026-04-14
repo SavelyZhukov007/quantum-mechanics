@@ -1,0 +1,242 @@
+/* ════════════════════════════════════════════════════════════════
+   ConstructorPreview.module.css
+════════════════════════════════════════════════════════════════ */
+
+.preview {
+    flex: 1;
+    overflow-y: auto;
+    background: var(--bg);
+    padding: 40px;
+}
+
+.inner {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+.pageHeader {
+    margin-bottom: 48px;
+}
+
+.pageTitle {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: 0.04em;
+    margin-bottom: 20px;
+}
+
+.headerLine {
+    height: 1px;
+    background: linear-gradient(90deg, var(--accent), var(--accent2), transparent);
+    opacity: 0.4;
+}
+
+.blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.empty {
+    text-align: center;
+    color: var(--text-dimmer);
+    padding: 60px 0;
+    font-size: 15px;
+}
+
+/* ─── Заголовки ─── */
+.h1 { font-family: var(--font-serif); font-size: 2rem; font-weight: 600; color: var(--text); }
+.h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 600; color: var(--text); padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+.h3 { font-family: var(--font-serif); font-size: 1.15rem; font-weight: 600; color: var(--text-dim); }
+
+/* ─── Теория ─── */
+.theory {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    line-height: 1.8;
+}
+
+.theoryHighlight {
+    border-color: var(--border-bright);
+    background: rgba(123, 140, 255, 0.05);
+}
+
+/* ─── Python ─── */
+.pythonBlock {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.pythonHeader {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg-card2);
+}
+
+.dots {
+    display: flex;
+    gap: 6px;
+}
+
+.dots span {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    display: block;
+}
+
+.langTag {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--accent);
+    margin-left: 4px;
+}
+
+.pythonTitle {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-dim);
+}
+
+.copyBtn {
+    margin-left: auto;
+    background: rgba(123,140,255,0.1);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text-dim);
+    padding: 3px 10px;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: var(--font-body);
+}
+
+.pythonDesc {
+    padding: 8px 16px;
+    font-size: 12px;
+    color: var(--text-dim);
+    border-bottom: 1px solid var(--border);
+    font-style: italic;
+}
+
+/* ─── Изображение ─── */
+.imageFigure { margin: 0; }
+
+.image {
+    width: 100%;
+    max-height: 440px;
+    display: block;
+}
+
+.figcaption {
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-dim);
+    font-style: italic;
+    margin-top: 8px;
+}
+
+.imageMissing {
+    padding: 20px;
+    background: var(--bg-card);
+    border: 1px dashed var(--border);
+    border-radius: 8px;
+    color: var(--text-dimmer);
+    text-align: center;
+    font-size: 13px;
+}
+
+/* ─── Анимация ─── */
+.animBlock {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px;
+}
+
+.animTag {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.animCanvas {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+.animCaption {
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-dim);
+    font-style: italic;
+    margin-top: 8px;
+}
+
+/* ─── Задача ─── */
+.exercise {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+}
+
+.exHeader { margin-bottom: 12px; }
+
+.exNum {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+.exText {
+    margin-bottom: 16px;
+    line-height: 1.7;
+}
+
+.exBtn {
+    background: rgba(123,140,255,0.1);
+    border: 1px solid var(--border-bright);
+    border-radius: 8px;
+    color: var(--accent);
+    padding: 7px 18px;
+    cursor: pointer;
+    font-size: 13px;
+    font-family: var(--font-body);
+    transition: background 0.15s;
+}
+
+.exBtn:hover { background: rgba(123,140,255,0.18); }
+
+.exAnswer {
+    margin-top: 14px;
+    padding: 12px 16px;
+    background: rgba(77,255,176,0.05);
+    border: 1px solid rgba(77,255,176,0.2);
+    border-radius: 8px;
+}
+
+/* ─── Разделитель ─── */
+.divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 4px 0;
+}

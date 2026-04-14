@@ -1,0 +1,122 @@
+/* ─────────────────────────────────────────────────────────────────
+   Constructor.module.css — страница-конструктор, обёртка
+───────────────────────────────────────────────────────────────── */
+
+/* Корень занимает весь экран */
+.root {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    background: var(--bg);
+}
+
+/* ─── Топбар ─── */
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 52px;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg-card);
+    z-index: 10;
+    flex-shrink: 0;
+}
+
+.topLeft {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logoIcon {
+    font-size: 18px;
+}
+
+.logoText {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+}
+
+.titleWrap {
+    border-left: 1px solid var(--border);
+    padding-left: 20px;
+}
+
+.titleInput {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 14px;
+    width: 260px;
+}
+
+.titleInput::placeholder {
+    color: var(--text-dimmer);
+}
+
+.topRight {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.viewToggle {
+    display: flex;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.toggleBtn {
+    padding: 5px 14px;
+    background: transparent;
+    border: none;
+    color: var(--text-dim);
+    cursor: pointer;
+    font-size: 12px;
+    font-family: var(--font-body);
+    transition: all 0.15s;
+}
+
+.toggleBtn.active {
+    background: rgba(123, 140, 255, 0.15);
+    color: var(--accent);
+}
+
+.exportBtn {
+    padding: 6px 18px;
+    background: var(--accent);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-size: 13px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    transition: opacity 0.15s;
+}
+
+.exportBtn:hover {
+    opacity: 0.85;
+}
+
+/* ─── Рабочая зона ─── */
+.workspace {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
