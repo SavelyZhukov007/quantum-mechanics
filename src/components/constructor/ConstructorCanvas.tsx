@@ -7,7 +7,7 @@ interface Props {
     selectedId: string | null
     noteTitle: string
     onSelect: (id: string | null) => void
-    onUpdate: (id: string, updates: Partial<Block>) => void
+    onUpdate: (id: string, updates: Partial<Omit<Block, "id" | "type">>) => void
     onDelete: (id: string) => void
     onMove: (id: string, direction: 'up' | 'down') => void
     onDuplicate: (id: string) => void

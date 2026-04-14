@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import type {
   Block,
   HeaderBlock,
@@ -16,7 +16,7 @@ interface Props {
   isFirst: boolean;
   isLast: boolean;
   onSelect: () => void;
-  onUpdate: (updates: Partial<Block>) => void;
+  onUpdate: (updates: Partial<Omit<Block, "id" | "type">>) => void;
   onDelete: () => void;
   onMoveUp: () => void;
   onMoveDown: () => void;
@@ -136,7 +136,7 @@ function HeaderEditor({
   onUpdate,
 }: {
   block: HeaderBlock;
-  onUpdate: (u: Partial<Block>) => void;
+  onUpdate: (u: Partial<Omit<Block, "id" | "type">>) => void;
 }) {
   return (
     <div className={styles.headerEditor}>
@@ -171,7 +171,7 @@ function TheoryEditor({
   onUpdate,
 }: {
   block: TheoryBlock;
-  onUpdate: (u: Partial<Block>) => void;
+  onUpdate: (u: Partial<Omit<Block, "id" | "type">>) => void;
 }) {
   return (
     <div className={styles.theoryEditor}>
@@ -204,7 +204,7 @@ function PythonEditor({
   onUpdate,
 }: {
   block: PythonBlock;
-  onUpdate: (u: Partial<Block>) => void;
+  onUpdate: (u: Partial<Omit<Block, "id" | "type">>) => void;
 }) {
   return (
     <div className={styles.pythonEditor}>
@@ -243,7 +243,7 @@ function ImageEditor({
   onUpdate,
 }: {
   block: ImageBlock;
-  onUpdate: (u: Partial<Block>) => void;
+  onUpdate: (u: Partial<Omit<Block, "id" | "type">>) => void;
 }) {
   const fileRef = useRef<HTMLInputElement>(null);
 
@@ -392,7 +392,7 @@ function AnimationEditor({
   onUpdate,
 }: {
   block: AnimationBlock;
-  onUpdate: (u: Partial<Block>) => void;
+  onUpdate: (u: Partial<Omit<Block, "id" | "type">>) => void;
 }) {
   const p = block.params;
 
@@ -562,7 +562,7 @@ function ExerciseEditor({
   onUpdate,
 }: {
   block: ExerciseBlock;
-  onUpdate: (u: Partial<Block>) => void;
+  onUpdate: (u: Partial<Omit<Block, "id" | "type">>) => void;
 }) {
   return (
     <div className={styles.exerciseEditor}>

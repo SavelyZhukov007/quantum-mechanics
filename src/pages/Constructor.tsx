@@ -17,7 +17,7 @@ export default function Constructor() {
 
     const addBlock = useCallback((type: Block['type']) => {
         const id = crypto.randomUUID()
-        const defaults: Record<Block['type'], Partial<Block>> = {
+        const defaults: Record<Block['type'], Partial<Omit<Block, 'id' | 'type'>>> = {
             header: { content: 'Новый заголовок', level: 2 },
             theory: { content: 'Введите текст теоретического блока...' },
             python: { content: '# Ваш код здесь\nprint("Hello, quantum world!")', title: 'script.py', description: '' },
@@ -31,8 +31,8 @@ export default function Constructor() {
         setSelectedId(id)
     }, [])
 
-    const updateBlock = useCallback((id: string, updates: Partial<Block>) => {
-        setBlocks(prev => prev.map(b => b.id === id ? { ...b, ...updates } : b))
+    const updateBlock = useCallback((id: string, updates: Partial<Omit<Block, 'id' | 'type'>>) => {
+        setBlocks(prev => prev.map(b => b.id === id ? ({ ...b, ...updates } as Block) : b))
     }, [])
 
     const deleteBlock = useCallback((id: string) => {
@@ -47,7 +47,7 @@ export default function Constructor() {
             const next = [...prev]
             const swap = direction === 'up' ? idx - 1 : idx + 1
             if (swap < 0 || swap >= next.length) return prev
-            ;[next[idx], next[swap]] = [next[swap], next[idx]]
+                ;[next[idx], next[swap]] = [next[swap], next[idx]]
             return next
         })
     }, [])
